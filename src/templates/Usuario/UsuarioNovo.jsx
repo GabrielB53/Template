@@ -29,7 +29,8 @@ const UsuarioNovo = () => {
                             <label htmlFor="inputAcesso" className="form-label">Acesso</label>
                             <select id="inputAcesso" className="form-select">
                                 <option selected>Nível de Acesso</option>
-                                <option>...</option>
+                                <option>Aluno</option>
+                                <option>Administrador</option>
                             </select>
                         </div>
                         

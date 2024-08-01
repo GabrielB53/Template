@@ -11,7 +11,7 @@ const Grafico = () => {
            <div className="p-3 w-100">
                 <Header 
                     goto={'/home'}
-                    title={'Inicial'}
+                    title={'Gráfico'}
                     logo={logo}
                     />
                 <h2>Conteúdo da página</h2>
