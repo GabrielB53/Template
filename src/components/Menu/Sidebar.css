@@ -1,7 +1,7 @@
 .sidebar{
     width: 200px;
     height: 100vh;
-    border: solid rgb(68, 0, 255) 1px;
+    border: solid rgb(255, 255, 255) 1px;
     border-radius: 10px;
   }
   
@@ -12,7 +12,7 @@
   .sidebar a:hover {
     font-size: 18px;
     font-weight: bold;
-    border: solid rgb(68, 0, 255) 1px;
+    border: solid rgb(53, 53, 53) 1px;
     background-color: rgb(206, 199, 250);
     border-radius: 10px;
     text-align: center;

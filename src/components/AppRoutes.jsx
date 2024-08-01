@@ -13,6 +13,12 @@ import UsuarioEditar from "../templates/Usuario/UsuarioEditar"
 import UsuarioNovo from "../templates/Usuario/UsuarioNovo"
 import UsuariosLista from "../templates/Usuario/UsuariosLista"
 
+import Grafico from "../templates/Graph/Grafico"
+import AddCardapio from "../templates/Cardapio/AddCardapio"
+import AlterarCardapio from "../templates/Cardapio/AlterarCardapio"
+import DeletarCardapio from "../templates/Cardapio/DeletarCardapio"
+import Cardapio from "../templates/Cardapio/Cardapio"
+
 const AppRoutes = () => {
   return (
     <div>
@@ -30,7 +36,12 @@ const AppRoutes = () => {
         <Route path="/usuarioslista" element={<UsuariosLista />} />
         <Route path="/usuarionovo" element={<UsuarioNovo />} />
         <Route path="/usuarioeditar/:id" element={<UsuarioEditar />} />
-
+        
+        <Route path="/grafico" element={<Grafico />} />
+        <Route path="/addcardapio" element={<AddCardapio />} />
+        <Route path="/alterarcardapio" element={<AlterarCardapio />} />
+        <Route path="/deletarcardapio" element={<DeletarCardapio />} />
+        <Route path="/cardapio" element={<Cardapio />} />
       </Routes>
     </div>
   )

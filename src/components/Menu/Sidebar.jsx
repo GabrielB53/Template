@@ -15,6 +15,8 @@ const Sidebar = () => {
                 <Link className="nav-link" aria-current="page" to={'/home'}>Dashboard</Link>
                 <Link className="nav-link" to={'/mensagem'}>Mensagem</Link>
                 <Link className="nav-link" to={'/usuario'}>Usuário</Link>
+                <Link className="nav-link" to={'/grafico'}>Gráfico</Link>
+                <Link className="nav-link" to={'/cardapio'}>Cardápio</Link>
             </nav>
         </div>
     )

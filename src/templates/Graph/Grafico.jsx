@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header"
 import Sidebar from '../../components/Menu/Sidebar'
 import logo from '../../assets/images/home.png'
 
-const Home = () => {
+const Grafico = () => {
 
     return (
         <div className="d-flex">
@@ -14,11 +14,11 @@ const Home = () => {
                     title={'Inicial'}
                     logo={logo}
                     />
-                <h2>Conteúdo Home</h2>
-                <p>Paia doido</p>
+                <h2>Conteúdo da página</h2>
+                <p>alguma coisa aí</p>
            </div>
         </div>
     )
 }
 
-export default Home
+export default Grafico

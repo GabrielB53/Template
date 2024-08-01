@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Header = ({goto, title, logo}) => {
+const Header = ({goto,title, logo}) => {
 
     return (
         <div className="

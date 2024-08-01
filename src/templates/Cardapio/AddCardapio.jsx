@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header"
 import Sidebar from '../../components/Menu/Sidebar'
 import logo from '../../assets/images/home.png'
 
-const Home = () => {
+const AddCardapio = () => {
 
     return (
         <div className="d-flex">
@@ -11,14 +11,14 @@ const Home = () => {
            <div className="p-3 w-100">
                 <Header 
                     goto={'/home'}
-                    title={'Inicial'}
+                    title={'Cardapio'}
                     logo={logo}
                     />
-                <h2>Conteúdo Home</h2>
-                <p>Paia doido</p>
+                <h2>Conteúdo da página</h2>
+                <p>alguma coisa aí</p>
            </div>
         </div>
     )
 }
 
-export default Home
+export default AddCardapio
