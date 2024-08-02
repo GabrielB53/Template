@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header"
 import Sidebar from '../../components/Menu/Sidebar'
 import logo from '../../assets/images/home.png'
 
+
 const AddCardapio = () => {
 
     return (
@@ -16,6 +17,7 @@ const AddCardapio = () => {
                     />
                 <h2>Conteúdo da página</h2>
                 <p>alguma coisa aí</p>
+          
            </div>
         </div>
     )
