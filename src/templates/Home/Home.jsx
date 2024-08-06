@@ -4,7 +4,6 @@ import Sidebar from '../../components/Menu/Sidebar'
 import logo from '../../assets/images/home.png'
 
 
-
 const Home = () => {
 
     return (
@@ -18,6 +17,7 @@ const Home = () => {
                     />
                 <h2>Conteúdo Home</h2>
                 <p>Paia doido</p>
+                
            </div>
         </div>
     )

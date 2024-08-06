@@ -1,18 +1,34 @@
-import Button from 'react-bootstrap/Button';
+import Carousel from 'react-bootstrap/Carousel';
+import ExampleCarouselImage from '../../assets/images/template2.jpg';
 
-function OutlineTypesExample() {
+function UncontrolledExample() {
   return (
-    <>
-      <Button variant="outline-primary">Primary</Button>{' '}
-      <Button variant="outline-secondary">Secondary</Button>{' '}
-      <Button variant="outline-success">Success</Button>{' '}
-      <Button variant="outline-warning">Warning</Button>{' '}
-      <Button variant="outline-danger">Danger</Button>{' '}
-      <Button variant="outline-info">Info</Button>{' '}
-      <Button variant="outline-light">Light</Button>{' '}
-      <Button variant="outline-dark">Dark</Button>
-    </>
+    <Carousel>
+      <Carousel.Item>
+        <ExampleCarouselImage text="First slide" />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <ExampleCarouselImage text="Second slide" />
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <ExampleCarouselImage text="Third slide" />
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
   );
 }
 
-export default OutlineTypesExample;
+export default UncontrolledExample;

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import Header from "../../components/Header/Header"
 import Sidebar from '../../components/Menu/Sidebar'
 import logo from '../../assets/images/home.png'
@@ -11,7 +10,7 @@ const AddCardapio = () => {
            <Sidebar />
            <div className="p-3 w-100">
                 <Header 
-                    goto={'/home'}
+                    goto={'/cardapio'}
                     title={'Cardapio'}
                     logo={logo}
                     />
