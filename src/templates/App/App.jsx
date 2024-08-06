@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './App.css'
 import Navbar from '../../components/Navbar/Navegacao'
-import Slide from '../../components/Carrousel/Carrousel'
 
 
 function App() {
