@@ -16,7 +16,7 @@ const Cardapio = () => {
                     logo={logo}
                     />
                     
-                    <section className="m-2 p-2 shadow-lg">
+                    <section className="m-1 p-2 shadow-lg">
                     <div className="d-flex justify-content-around">
                         <Link to={'/addcardapio'} 
                             className="btn btn-lg btn-primary">
@@ -32,8 +32,7 @@ const Cardapio = () => {
                         </Link>
                     </div>
                 </section>
-                <h2>Conteúdo da página</h2>
-                <p>alguma coisa aí</p>
+                
            </div>
         </div>
     )

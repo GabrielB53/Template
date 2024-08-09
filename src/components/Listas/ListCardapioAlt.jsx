@@ -1,68 +1,42 @@
-import { useNavigate } from "react-router-dom"
-import UsuarioService from "../../services/UsuarioService"
-import { useEffect, useState } from "react"
 
 const CardapioLista = () => {
-
-    const navigate = useNavigate();
-
     const goTo = () => {
-        navigate('/usuarioeditar')
+        navigate('/alterarcardapio')
     }
-
-    const [usuarios, setUsuarios] = useState([]);
-
-    useEffect(() => {
-        UsuarioService.getAllUsuarios().then(
-            (response) => {
-                const usuarios = response.data;
-                setUsuarios(usuarios);
-                console.log(usuarios);
-            }
-        ).catch((error) => {
-            console.log(error);
-        })
-    }, []);
-
-    const getId = (id) => {
-        navigate(`/usuarioeditar/` + id)
-    }
-
-    return (
-                <section className="m-2 p-2 shadow-lg">
-                    <div className="table-wrapper">
-                        <table className="table table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">Descrição</th>
-                                    <th scope="col">Data</th>
-                                    <th scope="col">Cadastro</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Abrir</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {usuarios?.map((usuario) => (
-                                    <tr className="" key={usuario.id}>
-                                        <td>{usuario.id}</td>
-                                        <td>{usuario.nome}</td>
-                                        <td>{usuario.email}</td>
-                                        <td>{usuario.nivelAcesso}</td>
-                                        <td>{usuario.dataCadastro}</td>
-                                        <td>{usuario.statusUsuario}</td>
-                                        <td>
-                                            <button onClick={() => getId(usuario.id)}
-                                                className="btn btn-sm btn-warning rounded">
-                                                <i className="bi bi-envelope-open"> Abrir</i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
+    return(
+    <>
+    <div className="table-wrapper">
+        <table className="table table-striped table-hover">
+            <thead>
+                <tr>
+                <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Principal</th>
+                    <th scope="col">Acompanhamento</th>
+                    <th scope="col">Adicional</th>
+                    <th scope="col">Alterar</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">1</td>
+                        <td>Cardapio 1</td>
+                        <td>10/08/2007</td>
+                        <td>Arroz e feijão</td>
+                        <td>Carne com batatas</td>
+                        <td>Salada</td>
+                        <td>
+                    <button type="button" onClick={() => goTo()}
+                            className="btn btn-sm btn-warning">
+                    <i className=""></i>Selecionar
+                    </button>
+                        </td>
+                        </tr>
+                </tbody>
+        </table>
+    </div>
+    </>
     )
 }
 

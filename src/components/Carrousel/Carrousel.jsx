@@ -14,45 +14,45 @@ import {
 const data = [
   {
     name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
+    Manha: 4000,
+    Tarde: 2400,
+    Noite: 2300,
   },
   {
     name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
+    Manha: 3000,
+    Tarde: 1398,
+    Noite: 2210,
   },
   {
     name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
+    Manha: 2000,
+    Tarde: 9800,
+    Noite: 2290,
   },
   {
     name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
+    Manha: 2780,
+    Tarde: 3908,
+    Noite: 2000,
   },
   {
     name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
+    Manha: 1890,
+    Tarde: 4800,
+    Noite: 2181,
   },
   {
     name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
+    Manha: 2390,
+    Tarde: 3800,
+    Noite: 2500,
   },
   {
     name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
+    Manha: 3490,
+    Tarde: 4300,
+    Noite: 2100,
   },
 ];
 
@@ -68,7 +68,7 @@ export default class Example extends PureComponent {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="Manhã" stroke="#8884d8" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="Manha" stroke="#8884d8" activeDot={{ r: 8 }} />
           <Line type="monotone" dataKey="Tarde" stroke="#82ca9d" />
           <Line type="monotone" dataKey="Noite" stroke="#0000ff" />
         </LineChart>
