@@ -61,7 +61,10 @@ const AlterarCardapio = () => {
                 </section>
                 <section className="p-2 shadow-lg">
                 <h2 className="p-2 fw-1">Listas de cardápios</h2>
-                <ListaCardapio/>
+                <ListaCardapio
+                funcao={'Alterar'}
+                opcao={'Alterar'}
+                />
                 </section>
                 
            </div>

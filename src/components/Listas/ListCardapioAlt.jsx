@@ -1,5 +1,5 @@
 
-const CardapioLista = () => {
+const CardapioLista = ({funcao,opcao}) => {
     const goTo = () => {
         navigate('/alterarcardapio')
     }
@@ -15,7 +15,7 @@ const CardapioLista = () => {
                     <th scope="col">Principal</th>
                     <th scope="col">Acompanhamento</th>
                     <th scope="col">Adicional</th>
-                    <th scope="col">Alterar</th>
+                    <th scope="col">{funcao}</th>
                 </tr>
             </thead>
                 <tbody>
@@ -29,7 +29,7 @@ const CardapioLista = () => {
                         <td>
                     <button type="button" onClick={() => goTo()}
                             className="btn btn-sm btn-warning">
-                    <i className=""></i>Selecionar
+                    <i className=""></i>{opcao}
                     </button>
                         </td>
                         </tr>
