@@ -15,8 +15,13 @@ const Grafico = () => {
                     title={'Gráfico'}
                     logo={logo}
                     />
-                <h2>Conteúdo da página</h2>
-                <p>alguma coisa aí</p>
+            <section className="container m-3">
+                <h2>Análise de Dados Semanais</h2>
+                <p>Nesta seção, você pode visualizar as tendências de uso/consumo em diferentes turnos ao longo da semana. 
+                    Este gráfico ajuda a identificar padrões que podem ser usados para otimizar recursos, ajustar 
+                    planejamentos e garantir que a gestão escolar esteja alinhada com as necessidades reais
+                     dos alunos e da instituição.</p>
+            </section>
                 <div id="ContainerGraph">
                     <Comp/>
                     </div>
