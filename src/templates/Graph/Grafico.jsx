@@ -4,6 +4,7 @@ import logo from '../../assets/images/home.png'
 import Comp from '../../components/Grafico/Graficos'
 import './Grafico.css'
 
+
 const Grafico = () => {
    
     return (

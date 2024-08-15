@@ -24,7 +24,6 @@
     "embla-carousel-class-names": "^8.1.8",
     "embla-carousel-fade": "^8.1.8",
     "embla-carousel-react": "^8.1.8",
-    "embla-carousel-wheel-gestures": "^8.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.2.0",

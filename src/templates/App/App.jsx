@@ -40,7 +40,7 @@ function App() {
           Nossa missão é garantir que cada refeição servida nas escolas seja planejada,
           preparada e distribuída com eficiência, sustentabilidade e qualidade. Somos uma 
           equipe apaixonada por educação e nutrição, comprometida em melhorar a experiência
-          alimentar de estudantes em todo o país.
+          alimentar de estudantes.
          </p>
          <h3>Quem somos?</h3>
          <p>No SGM, acreditamos que a alimentação é uma parte crucial do sucesso educacional.
