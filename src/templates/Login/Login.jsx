@@ -16,7 +16,7 @@ const Login = () => {
 
 
     return (
-        <div className="container">
+        <div className="">
             <form action="" className="login-form">
                 <div className="login-logo">
                     <img src={logo} alt="logo" />
@@ -29,7 +29,7 @@ const Login = () => {
                     <label htmlFor="password" className="form-label mb-0 fw-bold">Senha:</label>
                     <input type="password" id="password" className="form-control text-center fw-medium shadow" />
                 </div>
-                <div className="d-flex flex-row-reverse mt-1">
+                <div className="d-flex justify-content-center mt-1">
                     <p className="fw-bold fst-italic opacity-75 me-1">Esqueceu a senha?
                         <Link to={'/forgotpass'}> Clique aqui.</Link>
                     </p>
