@@ -16,7 +16,7 @@ const DeletarCardapio = () => {
                     title={'Deletar cardapio'}
                     logo={logo}
                 />
-                <section className="p-2 shadow-lg">
+                <section className="p-2 shadow-lg container">
                 <h2 className="p-2 fw-1">Listas de cardápios</h2>
                 <ListaCardapio
                 funcao={'Deletar'}

@@ -59,7 +59,7 @@ const AlterarCardapio = () => {
                         </div>
                     </form>
                 </section>
-                <section className="p-2 shadow-lg">
+                <section className="p-2 shadow-lg container m-0">
                 <h2 className="p-2 fw-1">Listas de cardápios</h2>
                 <ListaCardapio
                 funcao={'Alterar'}

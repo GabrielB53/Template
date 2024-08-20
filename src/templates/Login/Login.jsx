@@ -30,8 +30,8 @@ const Login = () => {
                     <input type="password" id="password" className="form-control text-center fw-medium shadow" />
                 </div>
                 <div className="d-flex justify-content-center mt-1">
-                    <p className="fw-bold fst-italic opacity-75 me-1">Esqueceu a senha?
-                        <Link to={'/forgotpass'}> Clique aqui.</Link>
+                    <p className="fw-bold fst-italic opacity-75 me-1"> Esqueceu a senha? 
+                        <Link to={'/forgotpass'}>Clique aqui.</Link>
                     </p>
                 </div>
                 <div className="d-flex justify-content-center my-1 d-none" id="infos">

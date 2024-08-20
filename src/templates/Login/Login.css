@@ -1,11 +1,13 @@
 .login-form {
     margin: 50px auto;
     width: 320px;
-    background-color: rgb(222, 237, 250);
-    box-shadow: rgba(100, 100, 111, 0.7) 0px 7px 29px 0px;
+    background-color: rgb(180, 185, 248);
+    color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 7px 29px 0px;
     border-radius: 10px;
     padding: 10px;
     text-align: left;
+    text-decoration: none;
   }
   
   .login-logo {
@@ -15,5 +17,5 @@
   
   .login-logo img{
     border-radius: 20px;
-    box-shadow: rgba(100, 100, 111, 0.7) 0px 7px 29px 0px;
+
   }

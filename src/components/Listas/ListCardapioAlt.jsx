@@ -5,7 +5,7 @@ const CardapioLista = ({funcao,opcao}) => {
     }
     return(
     <>
-    <div className="table-wrapper">
+    <div className="table-wrapper ">
         <table className="table table-striped table-hover">
             <thead>
                 <tr>

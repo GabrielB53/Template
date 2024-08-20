@@ -1,34 +1,12 @@
-import { useNavigate } from "react-router-dom"
 import Header from "../../components/Header/Header"
 import Sidebar from '../../components/Menu/Sidebar'
 import logo from '../../assets/images/home.png'
-import UsuarioService from "../../services/UsuarioService"
-import { useEffect, useState } from "react"
+
 
 const UsuariosLista = () => {
 
-    const navigate = useNavigate();
-
     const goTo = () => {
-        navigate('/usuarioeditar')
-    }
-
-    const [usuarios, setUsuarios] = useState([]);
-
-    useEffect(() => {
-        UsuarioService.getAllUsuarios().then(
-            (response) => {
-                const usuarios = response.data;
-                setUsuarios(usuarios);
-                console.log(usuarios);
-            }
-        ).catch((error) => {
-            console.log(error);
-        })
-    }, []);
-
-    const getId = (id) => {
-        navigate(`/usuarioeditar/` + id)
+        navigate('/editarusuario')
     }
 
     return (
@@ -40,7 +18,7 @@ const UsuariosLista = () => {
                     title={'Lista de Usuários'}
                     logo={logo}
                 />
-                <section className="m-2 p-2 shadow-lg">
+                <section className="m-0 p-2 shadow-lg container">
                     <div className="table-wrapper">
                         <table className="table table-striped table-hover">
                             <thead>
@@ -55,22 +33,19 @@ const UsuariosLista = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {usuarios?.map((usuario) => (
-                                    <tr className="" key={usuario.id}>
-                                        <td>{usuario.id}</td>
-                                        <td>{usuario.nome}</td>
-                                        <td>{usuario.email}</td>
-                                        <td>{usuario.nivelAcesso}</td>
-                                        <td>{usuario.dataCadastro}</td>
-                                        <td>{usuario.statusUsuario}</td>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Guilherme Lima de Andrade</td>
+                                        <td>Bonitinho@estudante.fieb.edu.br</td>
+                                        <td>Estudante</td>
+                                        <td>90204</td>
+                                        <td>Ativo</td>
                                         <td>
-                                            <button onClick={() => getId(usuario.id)}
-                                                className="btn btn-sm btn-warning rounded">
+                                            <button className="btn btn-sm btn-warning rounded" onClick={() => goTo()}>
                                                 <i className="bi bi-envelope-open"> Abrir</i>
                                             </button>
                                         </td>
                                     </tr>
-                                ))}
                             </tbody>
                         </table>
                     </div>
