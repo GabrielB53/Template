@@ -1,12 +1,14 @@
+import { Link, useNavigate } from "react-router-dom"
 import Header from "../../components/Header/Header"
 import Sidebar from '../../components/Menu/Sidebar'
 import logo from '../../assets/images/home.png'
 
 
-const UsuariosLista = () => {
 
+const UsuariosLista = () => {
+    const navigate = useNavigate();
     const goTo = () => {
-        navigate('/editarusuario')
+        navigate('/usuarioeditar')
     }
 
     return (
@@ -41,7 +43,7 @@ const UsuariosLista = () => {
                                         <td>90204</td>
                                         <td>Ativo</td>
                                         <td>
-                                            <button className="btn btn-sm btn-warning rounded" onClick={() => goTo()}>
+                                            <button type="button" className="btn btn-sm btn-warning rounded"  onClick={() => goTo()}>
                                                 <i className="bi bi-envelope-open"> Abrir</i>
                                             </button>
                                         </td>

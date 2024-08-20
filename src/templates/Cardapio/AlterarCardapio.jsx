@@ -4,7 +4,6 @@ import logo from '../../assets/images/home.png'
 import ListaCardapio from '../../components/Listas/ListCardapioAlt'
 
 const AlterarCardapio = () => {
-
     return (
         <div className="d-flex">
            <Sidebar />

@@ -1,7 +1,8 @@
-
-const CardapioLista = ({funcao,opcao}) => {
+import { Link, useNavigate } from "react-router-dom"
+const CardapioLista = ({funcao,opcao,caminho}) => {
+    const navigate = useNavigate();
     const goTo = () => {
-        navigate('/alterarcardapio')
+        navigate('//')
     }
     return(
     <>
