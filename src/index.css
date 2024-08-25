@@ -5,3 +5,41 @@
     max-height: 69vh; 
     overflow-y: auto; 
 }
+:root {
+    --background-color: white;
+    --text-color: black;
+
+}
+:root .uepa {
+    --detail-high-contrast: rgb(0, 0, 0);
+    --text-body: rgb(12, 0, 248);
+    --text-comment: rgb(255, 255, 255);
+    --detail-medium-contrast: rgb(83, 83, 83);
+}
+
+.dark-theme {
+    --background-color: black;
+    --text-color: white;
+    --data-bs-theme:"dark";
+}
+.dark-theme .uepa {
+    --detail-high-contrast: rgb(224, 4, 4);
+    --text-body: rgb(231, 231, 231);
+    --text-comment: rgb(141, 141, 141);
+    --detail-medium-contrast: rgb(45, 45, 45);
+    
+}
+.dark-theme .CorNavButtonLog{
+    background-color: rgb(255, 0, 0);
+    color: white;
+}.dark-theme .CorNavButtonLog:hover{
+    background-color: rgb(0, 30, 255);
+    color: white;
+}
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}

@@ -5,32 +5,19 @@
   box-sizing: inherit;
 }
 html {
+  /*Essa bosta de código fudido não me dá trégua, EU QUERO MINHA EX SAVVINHA,RAYNE VOLTA PRA MIM*/
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  --background-code: rgb(255, 255, 255);
-}
-body {
-  background-color: var(--background-code);
-  color: var(--text-high-contrast);
 
 }
-footer{
-  background-color: rgb(0, 132, 255);
-  padding: 10px;
-  text-align: center;
-}
-.opa{
-  /*Cores dos botoes jkkk*/
-  /*Não me pergunte como esse código funciona porque eu não sei.*/
-  --detail-high-contrast: rgb(56, 56, 56);
-  --text-body: rgb(0, 0, 0);
-  --text-comment: rgb(255, 255, 255);
-  --detail-medium-contrast: rgb(83, 83, 83);
-}
+
 .uepa{
      font-size: 62.5%;
      line-height: 1.15;
      margin:50px auto;
+}
+@media (max-width: 600px){
+  .uepa{display: none;}
 }

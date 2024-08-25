@@ -4,6 +4,7 @@ import '../../components/Carousel/Style.css'
 import Navbar from '../../components/Navbar/Navegacao'
 import Caarousel from '../../components/Carousel/Nsei'
 
+
 function App() {
   const [count, setCount] = useState(0)
   const OPTIONS = {}
@@ -14,6 +15,7 @@ function App() {
     <div className=' opa'>
 <navbar><Navbar /></navbar>
 <h1 className='text-center fw-bold m-4'>Bem-vindo ao SGM!</h1>
+
 <section className='uepa'>
   <Caarousel slides={SLIDES} options={OPTIONS} />
 </section>
