@@ -23,3 +23,7 @@
     color: #000000 !important;
     opacity: 0.5;                
 }
+.dark-theme .login-form{
+  background-color: rgb(255, 255, 255);
+  color: rgb(8, 8, 8);
+}

@@ -38,9 +38,8 @@ const Login = () => {
                     />
                 </div>
                 <div className="d-flex justify-content-center md-1">
-                    <p className="fw-bold fst-italic opacity-75 me-1"> 
-                        Esqueceu a senha? 
-                        <Link to={'/forgotpass'}>Clique aqui.</Link>
+                    <p className="fw-bold fst-italic opacity-90 me-1 p-2"> 
+                        Esqueceu a senha?   <Link to={'/forgotpass'}>Clique aqui.</Link>
                     </p>
                 </div>
                 
