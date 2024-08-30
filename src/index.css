@@ -36,6 +36,16 @@
 }.dark-theme .table{
     background-color: blue;
 }
+.dark-theme .sidebar{
+    background-color: black;
+}
+.dark-theme .sidebar a{
+    color:white !important;
+}
+.dark-theme .sidebar a:hover{
+    border: solid rgb(255, 255, 255) 1px;
+    background-color: rgb(44, 21, 192);
+}
 
 body {
     background-color: var(--background-color);

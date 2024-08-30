@@ -11,7 +11,7 @@ const Sidebar = () => {
                 <span className="fw-bold fst-italic">SGM</span>
             </div>
 
-            <nav className="nav flex-column">
+            <nav className="nav  flex-column">
                 <Link className="nav-link" aria-current="page" to={'/home'}>Dashboard</Link>
                 <Link className="nav-link" to={'/mensagem'}>Mensagem</Link>
                 <Link className="nav-link" to={'/usuario'}>Usuário</Link>

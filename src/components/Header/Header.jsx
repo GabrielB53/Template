@@ -1,13 +1,7 @@
 import { Link } from "react-router-dom";
-import ThemeToggleButton from '../Botoes/TrocarCorADM';
-import React, { useState } from 'react';
 
-const Header = ({goto,title, logo}) => {
-    const [, setTheme] = useState('Claro');
+const Header = ({goto, title, logo}) => {
 
-    const handleThemeChange = (newTheme) => {
-        setTheme(newTheme);
-    };
     return (
         <div className="
             d-flex justify-content-between align-content-center 
@@ -17,7 +11,7 @@ const Header = ({goto,title, logo}) => {
                 <span className="fw-bold h2">{title}</span>
             </div>
             <div>
-            <ThemeToggleButton onThemeChange={handleThemeChange} />
+                <img src={logo} alt="logo" />
             </div>
         </div>
     )

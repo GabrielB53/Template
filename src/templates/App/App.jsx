@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import '../../components/Carousel/Style.css'
 import Navbar from '../../components/Navbar/Navegacao'
@@ -6,7 +5,6 @@ import Caarousel from '../../components/Carousel/Nsei'
 
 
 function App() {
-  const [count, setCount] = useState(0)
   const OPTIONS = {}
   const SLIDE_COUNT = 5
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys())

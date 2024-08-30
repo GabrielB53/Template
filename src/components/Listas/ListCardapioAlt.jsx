@@ -1,16 +1,16 @@
 import {useNavigate } from "react-router-dom"
-import React, { useState } from 'react';
+import React from 'react';
+
 
 const CardapioLista = ({funcao,opcao}) => {
     const navigate = useNavigate();
     const goTo = () => {
         navigate('//')
     }
-    const [theme] = useState('Claro');
     return(
     <>
     <div className="table-wrapper ">
-        <table className={theme === 'Claro' ? 'table table-striped table-hover' : 'table table-dark table-striped table-hover'}>
+        <table className='table table-striped table-hover'>
             <thead>
                 <tr>
                 <th scope="col">Id</th>

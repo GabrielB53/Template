@@ -24,7 +24,7 @@ const Mensagem = () => {
                     logo={logo}
                 />
                 <section className="p-2 m-2 shadow-lg">
-                    <div className="table-wrapper">
+                    <div className="table-wrapper container">
                         <table className="table table-striped table-hover">
                             <thead>
                                 <tr>
