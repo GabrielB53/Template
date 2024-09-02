@@ -12,6 +12,11 @@ html {
   box-sizing: border-box;
 
 }
+footer{
+  background-color: rgb(215, 221, 250);
+  padding: 10px;
+  text-align: center;
+}
 
 .uepa{
      font-size: 62.5%;

@@ -1,6 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/images/system-logo_128_x_128.png';
 import './Login.css';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -20,13 +23,9 @@ const Login = () => {
                     <img src={logo} alt="logo" />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="email" className="form-label mb-0 fw-bold">Email:</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        className="form-control fw-medium shadow" 
-                        placeholder="rm00000@estudante.fieb.edu.br" 
-                    />
+                <label htmlFor="email" className="form-label mb-0">Email:</label>
+                
+                <TextField fullWidth id="password" name="password" label="Password" type="password" />
                 </div>
                 <div>
                     <label htmlFor="password" className="form-label mb-0 fw-bold">Senha:</label>

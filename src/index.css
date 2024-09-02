@@ -45,6 +45,8 @@
 .dark-theme .sidebar a:hover{
     border: solid rgb(255, 255, 255) 1px;
     background-color: rgb(44, 21, 192);
+}.dark-theme footer{
+    background-color: rgb(215, 227, 250);
 }
 
 body {

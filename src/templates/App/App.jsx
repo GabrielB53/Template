@@ -2,7 +2,7 @@ import './App.css'
 import '../../components/Carousel/Style.css'
 import Navbar from '../../components/Navbar/Navegacao'
 import Caarousel from '../../components/Carousel/Nsei'
-
+import { Link } from 'react-router-dom';
 
 function App() {
   const OPTIONS = {}
@@ -80,9 +80,9 @@ function App() {
               Transforme a merenda escolar em um instrumento de mudança positiva.
                Junte-se a nós nessa jornada!</p>
       </section>
-      <br />
-      <footer>
-       
+    
+      <footer >
+      <Link to={'/login'} className='btn btn-sm CorNavButtonLog '>Acesso restrito</Link>
       </footer>
     </div>
   )
