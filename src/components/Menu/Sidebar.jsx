@@ -5,7 +5,7 @@ import logo from '../../assets/images/system-logo_24_x_24.png';
 const Sidebar = () => {
 
     return (
-        <div className="sidebar">
+        <div className="sidebar ">
             <div className="d-flex justify-content-around align-items-center px-2 py-4 border-bottom rounded">
                 <img src={logo} alt="logo" className="m-1" />
                 <span className="fw-bold fst-italic">SGM</span>
