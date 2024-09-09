@@ -5,20 +5,21 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useFormik } from 'formik';
+import Avatar from '@mui/material/Avatar';
 import * as yup from 'yup';
 
 const validationSchema = yup.object({
     email: yup
-      .string('Enter your email')
+      .string('Digite seu email')
       .matches(
         /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
-        'Enter a valid email'
+        'Digite um email válido'
       )
-      .required('Email is required'),
+      .required('Email necessário'),
     password: yup
-      .string('Enter your password')
-      .min(8, 'Password should be of minimum 8 characters length')
-      .required('Password is required'),
+      .string('Digite sua senha')
+      .min(8, 'A senha deve ter um tamanho minímo de 8 letras')
+      .required('Senha necessária'),
   });
   
   
@@ -28,12 +29,11 @@ const Login = () => {
 
     const formik = useFormik({
         initialValues: {
-            email: '',
-            password: '',
+            email: 'Exemplo@Gmail.com',
+            password: 'foobar',
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            // Aqui você pode implementar o login real ou redirecionar o usuário
             navigate("/home");
         },
     });
@@ -45,10 +45,10 @@ const Login = () => {
     return (
         <div className="">
             <form onSubmit={formik.handleSubmit} className="login-form">
-                <div className="login-logo">
-                    <img src={logo} alt="logo" />
-                </div>
-                <div className="mb-3">
+            <div className="d-flex justify-content-center align-items-center mb-3 mt-2">
+               <Avatar sx={{ width: 140, height: 140 }} src="/broken-image.jpg" />
+            </div>
+                <div className="mb-2">
                     <TextField
                         fullWidth
                         id="email"
@@ -78,18 +78,18 @@ const Login = () => {
                     />
                 </div>
                 <div className="d-flex justify-content-center md-1">
-                    <p className="fw-bold fst-italic opacity-90 me-1 p-2"> 
+                    <p className=" opacity-90 me-1 p-2"> 
                         Esqueceu a senha? <Link to={'/forgotpass'}>Clique aqui.</Link>
                     </p>
                 </div>
                 
                 <div className="d-flex justify-content-around mb-3 mt-2">
                     <Button
-                        className="btn btn-warning fw-medium shadow"
+                        className="btn btn-primary fw-medium shadow"
                         type="button"
                         onClick={backto}
                         variant="contained"
-                        color="warning"
+                        color="secondary"
                     >
                         Cancelar
                     </Button>
@@ -97,7 +97,7 @@ const Login = () => {
                         className="btn btn-success fw-medium shadow"
                         type="submit"
                         variant="contained"
-                        color="success"
+                        color="primary"
                     >
                         Entrar
                     </Button>

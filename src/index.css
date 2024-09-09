@@ -38,6 +38,7 @@
 }
 .dark-theme .sidebar{
     background-color: black;
+    border: solid rgb(255, 255, 255) 1px;
 }
 .dark-theme .sidebar a{
     color:white !important;
