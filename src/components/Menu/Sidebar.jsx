@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import './Sidebar.css';
-import logo from '../../assets/images/system-logo_24_x_24.png';
+import logo from '../../assets/images/Logozinha.png';
 
 const Sidebar = () => {
 
     return (
-        <div className="sidebar ">
-            <div className="d-flex justify-content-around align-items-center px-2 py-4 border-bottom rounded">
-                <img src={logo} alt="logo" className="m-1" />
+        <div className="sidebar">
+            <div className="d-flex justify-content-around align-items-center px-3 py-2 border-bottom rounded">
+                <img src={logo} alt="logo" className="m-1 logo" />
                 <span className="fw-bold fst-italic">SGM</span>
             </div>
 

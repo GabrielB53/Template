@@ -2,14 +2,15 @@
 @import '../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
 
 .table-wrapper {
-    max-height: 69vh; 
-    overflow-y: auto; 
+    max-height: 69vh;
+    overflow-y: auto;
 }
+
 :root {
     --background-color: white;
     --text-color: black;
-
 }
+
 :root .uepa {
     --detail-high-contrast: rgb(0, 0, 0);
     --text-body: rgb(12, 0, 248);
@@ -17,41 +18,84 @@
     --detail-medium-contrast: rgb(83, 83, 83);
 }
 
+/* Gradiente animado para o tema claro */
+body {
+    background: linear-gradient(-45deg, #a3a3a3, #d0e7f9, #9f89ff, #cce5ff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tema escuro com gradiente animado */
 .dark-theme {
     --background-color: black;
     --text-color: white;
-    --data-bs-theme:"dark";
-} .dark-theme .uepa {
+    --data-bs-theme: "dark";
+    background: linear-gradient(-45deg, #2b2b2b, #1f1f1f, #121212, #2b2b2b);
+    background-size: 400% 400%;
+    animation: gradient-dark 15s ease infinite;
+}
+
+.dark-theme .uepa {
     --detail-high-contrast: rgb(255, 255, 255);
     --text-body: rgb(255, 0, 0);
     --text-comment: rgb(190, 190, 190);
     --detail-medium-contrast: rgb(45, 45, 45);
-    
-}.dark-theme .CorNavButtonLog{
+}
+
+.dark-theme .CorNavButtonLog {
     background-color: rgb(255, 0, 0);
     color: white;
-}.dark-theme .CorNavButtonLog:hover{
+}
+
+.dark-theme .CorNavButtonLog:hover {
     background-color: rgb(0, 30, 255);
     color: white;
-}.dark-theme .table{
+}
+
+.dark-theme .table {
     background-color: blue;
 }
-.dark-theme .sidebar{
+
+.dark-theme .sidebar {
     background-color: black;
     border: solid rgb(255, 255, 255) 1px;
 }
-.dark-theme .sidebar a{
-    color:white !important;
-}
-.dark-theme .sidebar a:hover{
-    border: solid rgb(255, 255, 255) 1px;
-    background-color: rgb(44, 21, 192);
-}.dark-theme footer{
-    background-color: rgb(215, 227, 250);
+
+.dark-theme .sidebar a {
+    color: white !important;
 }
 
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+.dark-theme .sidebar a:hover {
+    border: solid rgb(255, 255, 255) 1px;
+    background-color: rgb(44, 21, 192);
+}
+
+
+/* Gradiente animado para o tema claro */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Gradiente animado para o tema escuro */
+@keyframes gradient-dark {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

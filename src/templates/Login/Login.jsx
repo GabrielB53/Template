@@ -60,6 +60,7 @@ const Login = () => {
                         error={formik.touched.email && Boolean(formik.errors.email)}
                         helperText={formik.touched.email && formik.errors.email}
                         variant="standard"
+                        placeholder="Login@gmail.com"
                     />
                 </div>
                 <div>
@@ -75,6 +76,7 @@ const Login = () => {
                         error={formik.touched.password && Boolean(formik.errors.password)}
                         helperText={formik.touched.password && formik.errors.password}
                         variant="standard"
+                        placeholder="***********"
                     />
                 </div>
                 <div className="d-flex justify-content-center md-1">
