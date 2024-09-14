@@ -16,16 +16,16 @@ const Grafico = () => {
                     title={'Gráfico'}
                     logo={logo}
                     />
-            <section className="container m-3">
+            <section className=" caixota mt-2 mb-2">
                 <h2>Análise de Dados Semanais</h2>
                 <p>Nesta seção, você pode visualizar as tendências de uso/consumo em diferentes turnos ao longo da semana. 
                     Este gráfico ajuda a identificar padrões que podem ser usados para otimizar recursos, ajustar 
                     planejamentos e garantir que a gestão escolar esteja alinhada com as necessidades reais
                      dos alunos e da instituição.</p>
             </section>
-                <div id="ContainerGraph">
+                <div id="ContainerGraph" className="caixota">
                     <Comp/>
-                    </div>
+                </div>
              
            </div>
         </div>

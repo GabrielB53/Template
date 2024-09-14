@@ -1,6 +1,7 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
 
+
 .table-wrapper {
     max-height: 69vh;
     overflow-y: auto;
@@ -55,12 +56,12 @@ body {
     color: white;
 }
 
-.dark-theme .table {
-    background-color: blue;
+.dark-theme .caixota {
+    background-color: rgba(0, 0, 0, 0.452);
 }
 
 .dark-theme .sidebar {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.452);
     border: solid rgb(255, 255, 255) 1px;
 }
 

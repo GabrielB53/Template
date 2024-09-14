@@ -23,7 +23,6 @@ function BotaoTroca({ onThemeChange }) {
     const toggleTheme = () => {
         setTheme((prevTheme) => (prevTheme === 'Claro' ? 'Escuro' : 'Claro'));
     };
-
     return (
 
         <button onClick={toggleTheme} className={theme === 'Claro' ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-danger'}>

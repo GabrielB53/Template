@@ -87,7 +87,7 @@ const Login = () => {
                 
                 <div className="d-flex justify-content-around mb-3 mt-2">
                     <Button
-                        className="btn btn-primary fw-medium shadow"
+                        className=" fw-medium shadow"
                         type="button"
                         onClick={backto}
                         variant="contained"
@@ -96,7 +96,7 @@ const Login = () => {
                         Cancelar
                     </Button>
                     <Button
-                        className="btn btn-success fw-medium shadow"
+                        className="fw-medium shadow"
                         type="submit"
                         variant="contained"
                         color="primary"

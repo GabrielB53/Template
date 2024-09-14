@@ -17,6 +17,7 @@ const Home = () => {
                     title={'Inicial'}
                     logo={logo}
                     />
+                    <div className="caixota mt-3">
                <h2 className="text-center fw-bold m-4">Bem-vindo!</h2>
 <section className='uepa'>
   <Caarousel slides={SLIDES} options={OPTIONS} />
@@ -32,10 +33,9 @@ const Home = () => {
           equipe apaixonada por educação e nutrição, comprometida em melhorar a experiência
           alimentar de estudantes.
          </p></div>
-
-        
-                
-           </div>
+         </div>
+     
+        </div>
         </div>
     )
 }
