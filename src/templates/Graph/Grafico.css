@@ -1,12 +1,9 @@
 #ContainerGraph{
-
     width:100% ;
     height:500px ;
-    
 }
 .caixota{
     background-color: rgba(255, 255, 255, 0.452);
-    border:2px rgb(0, 0, 0);
     padding: 30px;
     border-radius: 4px;
 }

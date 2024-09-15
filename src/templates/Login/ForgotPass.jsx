@@ -1,92 +1,94 @@
-import { Link, useNavigate } from "react-router-dom";
-import logo from '../../assets/images/system-logo_128_x_128.png';
-import './Login.css';
-import * as React from 'react';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import { useFormik } from 'formik';
+import React from 'react';
 import Avatar from '@mui/material/Avatar';
-import * as yup from 'yup';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import Link from '@mui/material/Link';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
-const validationSchema = yup.object({
-    email: yup
-      .string('Digite seu email')
-      .matches(
-        /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
-        'Digite um email válido'
-      )
-      .required('Email necessário'),
-  });
-  
-  
-
-const ForgotPass = () => {
-    const navigate = useNavigate();
-
-    const formik = useFormik({
-        initialValues: {
-            email: '',
-        },
-        validationSchema: validationSchema,
-        onSubmit: (values) => {
-            navigate("/login");
-        },
-    });
-
-    const backto = () => {
-        navigate("/login");
-    }
-
-    return (
-        <div className="">
-            <form onSubmit={formik.handleSubmit} className="login-form">
-            <div className="d-flex justify-content-center align-items-center mb-2 mt-3">
-               <Avatar sx={{ width: 140, height: 140 }} src="/broken-image.jpg" />
-            </div>
-            <div className="d-flex justify-content-center align-items-center"><h5>Recuperar Senha</h5></div>
-                <div className="mb-2">
-                    <TextField
-                        fullWidth
-                        id="email"
-                        name="email"
-                        label="Email"
-                        value={formik.values.email}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        error={formik.touched.email && Boolean(formik.errors.email)}
-                        helperText={formik.touched.email && formik.errors.email}
-                        variant="standard"
-                    />
-                </div>
-                
-                <div className="d-flex justify-content-center md-1">
-                    <p className=" opacity-90 me-1 p-2"> 
-                        Acessar o Sistema: <Link to={'/forgotpass'}>Clique aqui.</Link>
-                    </p>
-                </div>
-                
-                <div className="d-flex justify-content-around mb-3 mt-2">
-                    <Button
-                        className="btn btn-primary fw-medium shadow"
-                        type="button"
-                        onClick={backto}
-                        variant="contained"
-                        color="secondary"
-                    >
-                        Voltar
-                    </Button>
-                    <Button
-                        className="btn btn-success fw-medium shadow"
-                        type="submit"
-                        variant="contained"
-                        color="primary"
-                    >
-                        Enviar
-                    </Button>
-                </div>
-            </form>
-        </div>
-    );
+function Copyright() {
+  return (
+    <Typography variant="body2" color="text.secondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
 }
 
-export default ForgotPass;
+
+
+export default function SignIn() {
+  return (
+    <div className='container'>
+      <Container component="main" maxWidth="xs">
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            Login
+          </Typography>
+          <Box component="form" sx={{ mt: 1 }}>
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Endereço de Email"
+              name="email"
+              autoComplete="email"
+              autoFocus
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+            />
+            <FormControlLabel
+              control={<Checkbox value="remember" color="primary" />}
+              label="Remember me"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Sign In
+            </Button>
+            <Grid container>
+              <Grid item xs>
+                <Link href="#" variant="body2">
+                  Esqueceu a senha?
+                </Link>
+              </Grid>
+              <Grid item>
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+      </Container>
+    </div>
+  );
+}
