@@ -1,11 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Sidebar from '../../components/Menu/Sidebar';
 import logo from '../../assets/images/home.png';
 import './Cardapio.css';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
 
 const Cardapio = () => {
+    const navigate = useNavigate();
 
+    const novoCardapio = () => {
+        navigate('/addcardapio');  
+    };
+    const alterarCardapio = () => {
+        navigate('/alterarcardapio');  
+    };
+    const deletarCardapio = () =>{
+        navigate('/deletarcardapio')
+    };
     return (
         <div className="d-flex">
            <Sidebar />
@@ -16,20 +28,13 @@ const Cardapio = () => {
                     logo={logo}
                     />
                     
-                    <section className="m-1 p-2 shadow-lg">
+                    <section className="mt-2 p-2 shadow-lg caixota">
                     <div className="d-flex justify-content-around">
-                        <Link to={'/addcardapio'} 
-                            className="btn btn-lg btn-primary">
-                            Adicionar
-                        </Link>
-                        <Link to={'/alterarcardapio'} 
-                            className="btn btn-lg btn-sucess" id="Verde">
-                            Alterar
-                        </Link>
-                        <Link to={'/deletarcardapio'} 
-                            className="btn btn-lg btn-warning">
-                            Deletar
-                        </Link>
+                    <ButtonGroup variant="contained" color="secondary" aria-label="Basic button group">
+                    <Button onClick={novoCardapio}>Adicionar</Button>
+                    <Button onClick={alterarCardapio}>Alterar</Button>
+                    <Button onClick={deletarCardapio}>Deletar</Button>
+                    </ButtonGroup>
                     </div>
                 </section>
                 

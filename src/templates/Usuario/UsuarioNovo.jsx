@@ -62,7 +62,7 @@ const UsuarioNovo = () => {
             {props => (
                 <form onSubmit={props.handleSubmit} className="row g-3">
                     <div  className="col-md-5">
-                        <label htmlFor=""></label>
+                        <label htmlFor="nome"></label>
                         <input
                         className="form-control"
                             type="text"

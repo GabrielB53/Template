@@ -12,11 +12,13 @@ function App() {
   return (
     <div className=' opa'>
 <navbar><Navbar /></navbar>
+<div className='container caixota mb-5'>
 <h1 className='text-center fw-bold m-4'>Bem-vindo ao SGM!</h1>
 
 <section className='uepa'>
   <Caarousel slides={SLIDES} options={OPTIONS} />
 </section>
+</div>
       <section className='container'>
         <h2>Transforme sua merenda em mudança: Consuma com consciência!</h2>
         <p>Você sabia que cada pedaço de merenda jogado fora é uma chance desperdiçada
