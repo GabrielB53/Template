@@ -126,7 +126,7 @@ const Login = () => {
                     <Link to="/forgotpass" variant="body2" className="link-color">
                     Esqueceu a senha?
                     </Link>
-                    <Link to="/forgotpass" variant="body2" className="link-color">
+                    <Link to="/" variant="body2" className="link-color">
                     Voltar
                     </Link>
                     </Box>

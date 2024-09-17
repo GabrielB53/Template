@@ -23,7 +23,7 @@ const Usuario = () => {
                     title={'Usuário'}
                     logo={logo}
                     />
-               <section className="m-2 p-2 shadow-lg caixota">
+               <section className="mt-2 p-2 shadow-lg caixota">
                     <div className="d-flex justify-content-around">
                     <ButtonGroup variant="contained" color="secondary" aria-label="Basic button group">
                     <Button onClick={novoUser}>Novo Usuário</Button>

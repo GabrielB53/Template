@@ -8,6 +8,13 @@ footer{
      line-height: 1.15;
      margin:50px auto;
 }
+.alert-position {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+}
+
 @media (max-width: 600px){
   .uepa{display: none;}
 }

@@ -2,10 +2,11 @@ import './App.css'
 import '../../components/Carousel/Style.css'
 import Navbar from '../../components/Navbar/Navegacao'
 import Caarousel from '../../components/Carousel/Nsei'
-import { Link } from 'react-router-dom';
-import SectionContent from '../../components/Secoes/SectionContent';
+import Login from '../../components/Botoes/LoginButton'
+import SectionContent from '../../components/Secoes/SectionContent'
 
 function App() {
+  
   const OPTIONS = {}
   const SLIDE_COUNT = 5
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
@@ -24,7 +25,7 @@ function App() {
       </main>
     
       <footer >
-      <Link to={'/login'} className='btn btn-sm CorNavButtonLog '>Acesso restrito</Link>
+        <Login/>
       </footer>
     </div>
   )

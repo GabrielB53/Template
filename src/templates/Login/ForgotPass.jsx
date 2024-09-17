@@ -66,7 +66,7 @@ const Login = () => {
                 <LockOutlinedIcon />
               </Avatar>
               <Typography component="h1" variant="h5" sx={{ color: textColor }}>
-                Login
+                Recuperar Senha
               </Typography>
               </Box>
                 <div className="mb-2">
@@ -97,11 +97,11 @@ const Login = () => {
                   sx={{ mt: 2, mb: 2 }}
                   color={buttonColor}
                 >
-                  Entrar
+                  Enviar E-mail
                 </Button>
               
                 <Box item xs>
-                  <Link to="/login" variant="body2">
+                  <Link to="/login" variant="body2" className="link-color">
                     Voltar
                   </Link>
                 </Box>
