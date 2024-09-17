@@ -1,9 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
-import logo from '../../assets/images/system-logo_128_x_128.png';
+import Box from '@mui/material/Box';
 import './Login.css';
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Typography from '@mui/material/Typography';
 import { useFormik } from 'formik';
 import Avatar from '@mui/material/Avatar';
 import * as yup from 'yup';
@@ -27,6 +30,17 @@ const validationSchema = yup.object({
 const Login = () => {
     const navigate = useNavigate();
 
+    const [theme, setTheme] = useState('Claro'); 
+
+    useEffect(() => {
+      const savedTheme = localStorage.getItem('tema') || 'Claro';
+      setTheme(savedTheme); 
+    }, []);
+  
+    const buttonColor = theme === 'Claro' ? 'primary' : 'error';
+    const avatarBgColor = theme === 'Claro' ? 'primary.main' : 'error.main';
+    const textColor = theme === 'Claro' ? '' : 'white';
+
     const formik = useFormik({
         initialValues: {
             email: 'Exemplo@Gmail.com',
@@ -44,67 +58,81 @@ const Login = () => {
 
     return (
         <div className="">
-            <form onSubmit={formik.handleSubmit} className="login-form">
-            <div className="d-flex justify-content-center align-items-center mb-3 mt-2">
-               <Avatar sx={{ width: 140, height: 140 }} src="/broken-image.jpg" />
-            </div>
+          <Container component="main" maxWidth="xs">
+            <Box className="caixota" sx={{ marginTop: 8 }}>
+            <form onSubmit={formik.handleSubmit} >
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <Avatar sx={{ m: 1, bgcolor: avatarBgColor }}>
+                <LockOutlinedIcon />
+              </Avatar>
+              <Typography component="h1" variant="h5" sx={{ color: textColor }}>
+                Login
+              </Typography>
+              </Box>
                 <div className="mb-2">
-                    <TextField
-                        fullWidth
-                        id="email"
-                        name="email"
-                        label="Email"
-                        value={formik.values.email}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        error={formik.touched.email && Boolean(formik.errors.email)}
-                        helperText={formik.touched.email && formik.errors.email}
-                        variant="standard"
-                        placeholder="Login@gmail.com"
-                    />
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="email"
+                  name="email"
+                  label="Email"
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  error={formik.touched.email && Boolean(formik.errors.email)}
+                  helperText={formik.touched.email && formik.errors.email}
+                  InputProps={{style: { color: textColor },}}InputLabelProps={{style: { color: textColor },}}
+                  sx={{'& .MuiOutlinedInput-root': {'& fieldset': {borderColor: textColor,},
+                  '&:hover fieldset': {borderColor: textColor,},
+                  '&.Mui-focused fieldset': {borderColor: textColor,},
+                    },
+                  }}
+                />
                 </div>
                 <div>
-                    <TextField
-                        fullWidth
-                        id="password"
-                        name="password"
-                        label="Senha"
-                        type="password"
-                        value={formik.values.password}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        error={formik.touched.password && Boolean(formik.errors.password)}
-                        helperText={formik.touched.password && formik.errors.password}
-                        variant="standard"
-                        placeholder="***********"
-                    />
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="password"
+                  name="password"
+                  label="Senha"
+                  type="password"
+                  value={formik.values.password}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  error={formik.touched.password && Boolean(formik.errors.password)}
+                  helperText={formik.touched.password && formik.errors.password}
+                  InputProps={{style: { color: textColor },}}InputLabelProps={{style: { color: textColor },}}
+                  sx={{'& .MuiOutlinedInput-root': {'& fieldset': {borderColor: textColor,},
+                  '&:hover fieldset': {borderColor: textColor,},
+                  '&.Mui-focused fieldset': {borderColor: textColor,},
+                    },
+                  }}
+                />
                 </div>
-                <div className="d-flex justify-content-center md-1">
-                    <p className=" opacity-90 me-1 p-2"> 
-                        Esqueceu a senha? <Link to={'/forgotpass'}>Clique aqui.</Link>
-                    </p>
-                </div>
-                
-                <div className="d-flex justify-content-around mb-3 mt-2">
-                    <Button
-                        className=" fw-medium shadow"
-                        type="button"
-                        onClick={backto}
-                        variant="contained"
-                        color="secondary"
-                    >
-                        Cancelar
-                    </Button>
-                    <Button
-                        className="fw-medium shadow"
-                        type="submit"
-                        variant="contained"
-                        color="primary"
-                    >
-                        Entrar
-                    </Button>
-                </div>
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  sx={{ mt: 2, mb: 2 }}
+                  color={buttonColor}
+                >
+                  Entra
+                </Button>
+              
+                <Box sx={{display: 'flex',justifyContent: 'space-between',alignItems: 'center',  width: '100%' }}>
+                    <Link to="/forgotpass" variant="body2" className="link-color">
+                    Esqueceu a senha?
+                    </Link>
+                    <Link to="/forgotpass" variant="body2" className="link-color">
+                    Voltar
+                    </Link>
+                    </Box>
             </form>
+            </Box>
+        </Container>
         </div>
     );
 }
