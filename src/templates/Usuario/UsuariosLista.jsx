@@ -1,15 +1,39 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate} from "react-router-dom"
+import UsuarioService from "../../services/UsuarioService"
 import Header from "../../components/Header/Header"
 import Sidebar from '../../components/Menu/Sidebar'
 import logo from '../../assets/images/home.png'
-
+import axios from 'axios'
+import { useEffect, useState } from "react"
 
 
 const UsuariosLista = () => {
+    
     const navigate = useNavigate();
-    const goTo = () => {
-        navigate('/usuarioeditar')
+    const [dados, setDados] = useState([])
+
+    function receberDados(){
+        axios.get('http://localhost:8080/usuarionovo'
+        ).then(response => {
+            console.log(response.data)
+            setDados(response.data)
+        })
+        .catch(error => console.log(error))
     }
+    useEffect(()=>{
+        receberDados()
+     }, [])
+
+    const ItensTable = () => dados.map(
+        usuarios => 
+        <tr key={usuarios.id} >
+            <td>{usuarios.id}</td>
+            <td>{usuarios.nome}</td>
+            <td>{usuarios.email}</td>
+            <td>{usuarios.tipoUsuario}</td>
+        </tr>
+    )
+
 
     return (
         <div className="d-flex">
@@ -20,7 +44,7 @@ const UsuariosLista = () => {
                     title={'Lista de Usuários'}
                     logo={logo}
                 />
-                <section className="m-0 p-2 shadow-lg container">
+                <section className="m-2 p-2 shadow-lg">
                     <div className="table-wrapper">
                         <table className="table table-striped table-hover">
                             <thead>
@@ -28,26 +52,11 @@ const UsuariosLista = () => {
                                     <th scope="col">ID</th>
                                     <th scope="col">Nome</th>
                                     <th scope="col">Email</th>
-                                    <th scope="col">Acesso</th>
-                                    <th scope="col">Cadastro</th>
                                     <th scope="col">Status</th>
-                                    <th scope="col">Abrir</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Guilherme Lima de Andrade</td>
-                                        <td>Bonitinho@estudante.fieb.edu.br</td>
-                                        <td>Estudante</td>
-                                        <td>90204</td>
-                                        <td>Ativo</td>
-                                        <td>
-                                            <button type="button" className="btn btn-sm btn-warning rounded"  onClick={() => goTo()}>
-                                                <i className="bi bi-envelope-open"> Abrir</i>
-                                            </button>
-                                        </td>
-                                    </tr>
+                                <ItensTable/>
                             </tbody>
                         </table>
                     </div>
