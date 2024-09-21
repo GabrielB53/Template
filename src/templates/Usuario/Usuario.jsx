@@ -1,4 +1,4 @@
-import { Link,useNavigate } from "react-router-dom"
+import {useNavigate } from "react-router-dom"
 import Header from "../../components/Header/Header"
 import Sidebar from '../../components/Menu/Sidebar'
 import logo from '../../assets/images/home.png'
@@ -14,6 +14,9 @@ const Usuario = () => {
     const listaUser = () => {
         navigate('/usuarioslista');  
     };
+    const deletarUser = () => {
+        navigate('/usuariodeletar');  
+    };
     return (
         <div className="d-flex">
            <Sidebar />
@@ -28,6 +31,7 @@ const Usuario = () => {
                     <ButtonGroup variant="contained" color="secondary" aria-label="Basic button group">
                     <Button onClick={novoUser}>Novo Usuário</Button>
                     <Button onClick={listaUser}>Lista de Usuários</Button>
+                    <Button onClick={deletarUser}>Deletar Usuário</Button>
                     </ButtonGroup>
                     </div>
                 </section>

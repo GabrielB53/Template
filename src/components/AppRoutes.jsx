@@ -18,6 +18,7 @@ import AddCardapio from "../templates/Cardapio/AddCardapio"
 import AlterarCardapio from "../templates/Cardapio/AlterarCardapio"
 import DeletarCardapio from "../templates/Cardapio/DeletarCardapio"
 import Cardapio from "../templates/Cardapio/Cardapio"
+import UsuarioDeletar from "../templates/Usuario/UsuarioDeletar"
 
 const AppRoutes = () => {
   return (
@@ -36,6 +37,7 @@ const AppRoutes = () => {
         <Route path="/usuarioslista" element={<UsuariosLista />} />
         <Route path="/usuarionovo" element={<UsuarioNovo />} />
         <Route path="/usuarioeditar" element={<UsuarioEditar />} />
+        <Route path="/usuariodeletar" element={<UsuarioDeletar />} />
         
         <Route path="/grafico" element={<Grafico />} />
         <Route path="/addcardapio" element={<AddCardapio />} />
