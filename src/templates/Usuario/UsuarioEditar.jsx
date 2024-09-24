@@ -44,7 +44,7 @@ const UsuarioEditar = () => {
 
     const handleFormSubmit = (values) => {
         // Realiza requisição PUT para atualizar os dados do usuário
-        axios.put(`http://localhost:8080/usuario/${id}`, values)
+        axios.put(`http://localhost:8080/usuarionovo/${id}`, values)
             .then(response => {
                 setAlerta({ show: true, message: 'Usuário atualizado com sucesso!', type: 'success' });
                 setTimeout(() => {

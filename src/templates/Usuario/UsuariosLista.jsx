@@ -33,12 +33,12 @@ const UsuariosLista = () => {
             <td>{usuarios.nome}</td>
             <td>{usuarios.email}</td>
             <td>{usuarios.tipoUsuario}</td>
-            <button
+            <td><button
                         className="btn btn-danger"
                         onClick={editarUser}
                     >
                         Alterar
-            </button>
+            </button></td>
         </tr>
     )
 
