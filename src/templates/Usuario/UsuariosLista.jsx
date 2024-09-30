@@ -6,25 +6,50 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 
 const UsuariosLista = () => {
-    const navigate = useNavigate();
-    const [dados, setDados] = useState([]);
+    
+    const [dados, setDados] = useState([])
+    const [itemApagado, setItemApagado] = useState(false)
 
-    const editarUser = (id) => {
-        navigate(`/usuarioeditar/${id}`); // Passa o ID para a URL
-    };
+    function receberDados(){
+        axios.get('http://localhost:8080/usuarionovo'
+        ).then(response => {
+            console.log(response.data)
+            setDados(response.data)
+        })
+        .catch(error => console.log(error))
+    }
 
-    const receberDados = () => {
-        axios.get('http://localhost:8080/usuarionovo')
-            .then(response => {
-                console.log(response.data);
-                setDados(response.data);
-            })
-            .catch(error => console.log(error));
-    };
+    async function apagarDados(usuario){
+        axios.delete('http://localhost:8080/usuarionovo',
+        {
+            data : usuario,
+            headers: {                  
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization", 
+                "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, PATCH, DELETE" ,
+                "Content-Type": "application/json;charset=UTF-8"                   
+            },
+        })
+        .then(response => {
+            console.log(response)
+            console.log('Dados apagados!')
+            setItemApagado(true)
+        })
+        .catch(error => console.log(error))
+    }
+    
+    useEffect(()=>{
+        receberDados()
+    }, [])
 
-    useEffect(() => {
-        receberDados();
-    }, []);
+    useEffect(()=>{
+        if(itemApagado)
+            receberDados()
+        return() =>{
+            setItemApagado(false)
+        }
+    }, [itemApagado])
+
 
     const ItensTable = () => dados.map(
         usuario => (
@@ -36,7 +61,9 @@ const UsuariosLista = () => {
                 <td>
                     <button
                         className="btn btn-danger"
-                        onClick={() => editarUser(usuario.id)} // Passa o ID do usuário
+                        onClick={async ()=>{
+                            await apagarDados(JSON.stringify(usuario))
+                        }} 
                     >
                         Alterar
                     </button>
