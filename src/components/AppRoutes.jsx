@@ -36,7 +36,7 @@ const AppRoutes = () => {
         <Route path="/usuario" element={<Usuario />} />
         <Route path="/usuarioslista" element={<UsuariosLista />} />
         <Route path="/usuarionovo" element={<UsuarioNovo />} />
-        <Route path="/usuarioeditar/:id" element={<UsuarioEditar />} />
+        <Route path="/usuarioeditar" element={<UsuarioEditar />} />
         <Route path="/usuariodeletar" element={<UsuarioDeletar />} />
         
         <Route path="/grafico" element={<Grafico />} />

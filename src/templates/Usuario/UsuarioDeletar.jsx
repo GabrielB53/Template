@@ -65,7 +65,7 @@ const UsuariosLista = () => {
                             await apagarDados(JSON.stringify(usuario))
                         }} 
                     >
-                        Alterar
+                        Deletar
                     </button>
                 </td>
             </tr>

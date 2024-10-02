@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 const UsuariosLista = () => {
     
     const [dados, setDados] = useState([])
-    const [itemApagado, setItemApagado] = useState(false)
+    const navigate = useNavigate();
 
     function receberDados(){
         axios.get('http://localhost:8080/usuarionovo'
@@ -18,37 +18,11 @@ const UsuariosLista = () => {
         })
         .catch(error => console.log(error))
     }
-
-    async function apagarDados(usuario){
-        axios.delete('http://localhost:8080/usuarionovo',
-        {
-            data : usuario,
-            headers: {                  
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization", 
-                "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, PATCH, DELETE" ,
-                "Content-Type": "application/json;charset=UTF-8"                   
-            },
-        })
-        .then(response => {
-            console.log(response)
-            console.log('Dados apagados!')
-            setItemApagado(true)
-        })
-        .catch(error => console.log(error))
-    }
-    
     useEffect(()=>{
         receberDados()
     }, [])
 
-    useEffect(()=>{
-        if(itemApagado)
-            receberDados()
-        return() =>{
-            setItemApagado(false)
-        }
-    }, [itemApagado])
+
 
 
     const ItensTable = () => dados.map(
@@ -61,9 +35,7 @@ const UsuariosLista = () => {
                 <td>
                     <button
                         className="btn btn-danger"
-                        onClick={async ()=>{
-                            await apagarDados(JSON.stringify(usuario))
-                        }} 
+                        onClick={() => navigate('/usuarioeditar', { state: { usuario } })}
                     >
                         Alterar
                     </button>
