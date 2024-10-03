@@ -1,39 +1,40 @@
-import React from 'react';
-import './App.css';
-import '../../components/Carousel/Style.css';
-import Navbar from '../../components/Navbar/Navegacao';
-import Caarousel from '../../components/Carousel/Nsei';
-import Login from '../../components/Botoes/LoginButton';
-import SectionContent from '../../components/Secoes/SectionContent';
-import { ThemeProvider } from '../../contexts/ThemeContext'; // Importe o ThemeProvider
+import React from 'react'; // Importa a biblioteca React para criação de componentes
+import './App.css'; // Importa o arquivo CSS para estilização da aplicação
+import '../../components/Carousel/Style.css'; // Importa o estilo específico para o componente Carousel
+import Navbar from '../../components/Menu/Navegacao'; // Importa o componente de navegação
+import Caarousel from '../../components/Carousel/Nsei'; // Importa o componente Carousel
+import Login from '../../components/Botoes/LoginButton'; // Importa o botão de login
+import SectionContent from '../../components/Secoes/SectionContent'; // Importa o conteúdo da seção
+import { ThemeProvider } from '../../contexts/ThemeContext'; // Importa o ThemeProvider para gerenciamento de tema
 
+// Define o componente funcional App
 function App() {
-    const OPTIONS = {};
-    const SLIDE_COUNT = 5;
-    const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+    const OPTIONS = {}; // Define opções para o Carousel (atualmente vazio)
+    const SLIDE_COUNT = 5; // Número total de slides no Carousel
+    const SLIDES = Array.from(Array(SLIDE_COUNT).keys()); // Cria um array de índices para os slides
 
     return (
-        <ThemeProvider> {/* Envolva toda a aplicação no ThemeProvider */}
-            <div className="opa">
+        <ThemeProvider> {/* Envolve toda a aplicação no ThemeProvider para fornecer contexto de tema */}
+            <div className="opa"> {/* Div principal da aplicação */}
                 <nav>
-                    <Navbar />
+                    <Navbar /> {/* Renderiza a barra de navegação */}
                 </nav>
-                <div className="container mb-5 ">
-                    <h1 className="text-center fw-bold m-4">Bem-vindo ao SGM!</h1>
+                <div className="container mb-5"> {/* Container para o conteúdo da aplicação */}
+                    <h1 className="text-center fw-bold m-4">Bem-vindo!</h1> {/* Título da aplicação */}
                     <section className="uepa">
-                        <Caarousel slides={SLIDES} options={OPTIONS} />
+                        <Caarousel slides={SLIDES} options={OPTIONS} /> {/* Renderiza o componente Carousel com slides e opções */}
                     </section>
                 </div>
-                <main className="container">
-                    <SectionContent />
+                <main className="container"> {/* Seção principal da aplicação */}
+                    <SectionContent /> {/* Renderiza o conteúdo da seção */}
                 </main>
 
                 <footer>
-                    <Login />
+                    <Login /> {/* Renderiza o botão de login no rodapé */}
                 </footer>
             </div>
         </ThemeProvider>
     );
 }
 
-export default App;
+export default App; // Exporta o componente App para uso em outros arquivos

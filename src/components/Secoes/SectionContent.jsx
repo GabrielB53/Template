@@ -66,10 +66,10 @@ const SectionContent = () => {
       </ul>
       <h3>Risus Platea</h3>
       <p>
-        Estamos comprometidos com a melhoria contínua e com o impacto positivo nas
-        comunidades em que atuamos. Sabemos que, ao melhorar a gestão da merenda
-        escolar, não estamos apenas economizando recursos, mas também contribuindo
-        para o desenvolvimento saudável e sustentável das futuras gerações.
+        In inceptos enim massa risus platea. Rutrum quisque class sapien auctor mollis felis. Augue enim proin efficitur 
+        suscipit dictum faucibus. Lectus nunc pulvinar quisque condimentum massa potenti. Lectus dapibus faucibus natoque
+        neque nullam senectus. Curae eleifend vivamus non dignissim netus, sagittis fermentum leo? Sollicitudin tempus 
+        rhoncus amet montes convallis mus maecenas at ac. Finibus iaculis tristique vivamus at sit a torquent hendrerit.
       </p>
       <h3>In inceptos Enim</h3>
       <p>

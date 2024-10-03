@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 
-function BotaoTroca({ onThemeChange }) {
+function ThemeToggleButtom({ onThemeChange }) {
     const [theme, setTheme] = useState('Claro');
 
     // Função para aplicar o tema diretamente no body
@@ -42,4 +42,4 @@ function BotaoTroca({ onThemeChange }) {
     );
 }
 
-export default BotaoTroca;
+export default ThemeToggleButtom;
