@@ -3,16 +3,16 @@ import React from 'react';
 const ContentHome = () => {
   return (
     <>
-      <h3>Nosso Compromisso</h3>
-        <p>Estamos comprometidos com a melhoria contínua e com o impacto positivo nas
-        comunidades em que atuamos. Sabemos que, ao melhorar a gestão da merenda escolar, 
-        não estamos apenas economizando recursos, mas também contribuindo para o desenvolvimento 
-        saudável e sustentável das futuras gerações.</p>
-        <p >Bem-vindo ao Sistema de Gerenciamento de Merenda Escolar!
-          Nossa missão é garantir que cada refeição servida nas escolas seja planejada,
-          preparada e distribuída com eficiência, sustentabilidade e qualidade. Somos uma 
-          equipe apaixonada por educação e nutrição, comprometida em melhorar a experiência
-          alimentar de estudantes.
+      <h3>Lorem Ipsum</h3>
+        <p>Euismod feugiat vehicula litora purus lacinia. Est hac platea consequat commodo molestie dis ligula amet!
+      Tellus facilisis venenatis nec mattis suspendisse auctor torquent sollicitudin. Rhoncus ligula eget
+      eleifend egestas auctor ultricies imperdiet elit erat. Auctor himenaeos varius pulvinar nostra nostra
+      rutrum maecenas ullamcorper. Litora morbi at ad posuere magnis efficitur. Maecenas sapien curae dapibus 
+      nam magna velit class fusce imperdiet. Ipsum ultrices nunc hendrerit eu molestie rutrum fusce. Consectetur.</p>
+        <p >     In inceptos enim massa risus platea. Rutrum quisque class sapien auctor mollis felis. Augue enim proin efficitur 
+        suscipit dictum faucibus. Lectus nunc pulvinar quisque condimentum massa potenti. Lectus dapibus faucibus natoque
+        neque nullam senectus. Curae eleifend vivamus non dignissim netus, sagittis fermentum leo? Sollicitudin tempus 
+        rhoncus amet montes convallis mus maecenas at ac. Finibus iaculis tristique vivamus at sit a torquent hendrerit.
         </p>
     </>
   );
